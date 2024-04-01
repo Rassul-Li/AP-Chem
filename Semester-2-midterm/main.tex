@@ -1,0 +1,408 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+\newcommand{\hilight}[1]{\setlength{\fboxsep}{1pt}\colorbox{yellow}{#1}}
+\newcommand{\hlitem}{\stepcounter{enumi}\item[\hilight{\theenumi}]}
+ \newcommand{\ered}[1]{E^o_{{red}\ifx\\#1\\\else\ \ce{#1}\fi}}
+ \newcommand{\eox}[1]{E^o_{{ox}\ifx\\#1\\\else\ \ce{#1}\fi}}
+% \newcommand{\ered}[1]{E^o_{{red}\ce{#1}}}
+% \newcommand{\eox}[1]{E^o_{{ox}\ce{#1}}}
+\newcommand{\ecell}{E^o_{cell}}
+\newcommand{\degree}{°}
+\newcommand{\Q}{$Q$}
+
+\title{\Huge{AP Chemistry}\\Semester II Midterm Solutions}
+\author{\huge{Rassul Li}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Unit 7: Electrochemistry}
+
+\section{Question 1}
+\qs{}{
+A galvanic cell was constructed by placing \ce{Mn (s)} in 1.0 M \ce{MgCl2} and \ce{Zn (s)} in 1.0 M \ce{ZnCl2}. Which of the following is false at the start of the reaction?
+\begin{enumerate}[label=\Alph*.]
+    \item $E^o_{cell} < 1.00 V$
+    \item $\Delta G < 0$
+    \hlitem $K < Q$
+    \item Stability of the reactants $<$ Stability of the products
+\end{enumerate}}
+Since it is given that a galvanic cell is being created, the forward reaction must be favorable. Therefore, the numerator (products) in the $Q$ expression must be less than that of $K$. Thus, $K > Q$. 
+
+However, from a elimination point of view, we can conclude that $\ecell$ is smaller than 1, $\Delta G$ is smaller than zero (rxn is spontaneous), and products are more stable than reactants. 
+
+\section{Question 2}
+\qs{}{
+	What is the value of $E^o_{cell}$ for a galvanic cell that undergoes the following reaction? \\ \\ \ce{Al(s) + 3Fe^3+(aq) -> 3Fe^2+(aq) + Al^3+(aq)}
+	\begin{enumerate}[label=\Alph*.]
+   		\hlitem +2.43 V
+    		\item +0.89 V
+    		\item -0.89 V
+    		\item -2.43 V
+	\end{enumerate}
+}
+\pagebreak[4]
+
+From the Table of Standard Reduction Potentials, we can find the reactions 
+\begin{align*}
+    \ce{Al^3+ + 3 \textit{e}^- &-> Al(s)}\quad \ered{} = -1.66\: V \\
+    \ce{Fe^3+ + \textit{e}^- &-> Fe^2+}\quad \ered{} = +0.77\: V
+\end{align*}
+
+Reversing the Al reduction and combining with the Fe reaction produces:
+\begin{align*}
+    \ce{Al(s) + 3Fe^3+(aq) &-> 3Fe^2+(aq) + Al^3+(aq)}
+\end{align*}
+
+To find $E_{cell}^{o}$, $\ered{}$ of the half-reactions need to be added together. 
+
+\begin{note} 
+	Although we did multiply the \ce{Fe} half reaction by a coefficient of three, the $\ered{}$ should not be multiplied! \\
+	Why? \\
+	$\ered{}$ is what is known as a \textbf{intensive quantity}, meaning that it does not necessarily change when size of the system increases. This is different from what we call a \textbf{extensive quantity}, which changes with the increase in size of the system. A more common example is mass and density. Because mass is an extensive quantity, when you add more "stuff" to a system, the mass necessarily increases. However, because density is an intensity quantity, it can stay the same, decrease, or increase when you add more "stuff" to the system. 
+\end{note}
+\begin{math}
+    \ecell = \ered{Fe^{3+}} + \eox{Al} = +0.77\: V + 1.66\: V = +2.43\: V
+\end{math}
+
+\section{Question 3}
+\qs{}{
+A galvanic cell is constructed by placing unknown metal X in a solution of \ce{X^{positive}} and \ce{Cu(s)} in a solution of \ce{Cu^2+}, and the $\ecell$ was found to be +3.38 V. After some time, the mass of the X decreases while the mass of \ce{Cu(s)} increases. What is the identity element X? 
+\begin{enumerate}[label=\Alph*.]
+    \item Pb
+    \item Sn
+    \item Ni
+    \hlitem Li
+\end{enumerate}}
+
+This one is sneaky!
+
+The reaction that is occurring is X is being oxidized and \ce{Cu^2+} is being reduced. The reaction is as follows: 
+\begin{align*}
+\ce{X(s) + Cu^2+ &-> X^{positive} + Cu(s)}
+\end{align*}
+
+From the given information, we know that $\ecell = +3.38$ V. We can find the $\ered{}$ of \ce{Cu^2+} and the $\eox{}$ of X. Since the $\ered{Cu^2+}$ is given as 0.34 V, we can find the $\eox{}$ of X.
+\begin{align*}
+    \ecell = \ered{Cu^2+} + \eox{X} = 0.34\: V + \eox{X} &= 3.38\: V \\
+    \eox{X} &= 3.04\: V
+\end{align*}
+
+A quick look to the given standard reduction potentials will show that no element has a $\eox{}$ of 3.04 V. However, $\ered{Pb}$, $\ered{Sn}$, and $\ered{Ni}$ are all given. This means that X must be Li based on the process of elimination.
+
+As I've said, sneaky!
+
+\section{Question 4}
+\qs{}{
+Strips of Pb and Zn metal are placed in a solution of \ce{Mn(NO3)2}. On which metal would a change be observed?
+\begin{enumerate}[label=\Alph*.]
+    \item Pb(s) only
+    \item Zn(s) only
+    \item Both Pb(s) and Zn(s) 
+    \item Neither metal
+\end{enumerate}}
+
+\section{Question 5}
+\qs{}{
+What is the value of $\Delta G^o$ for the following reaction? \\ \\
+\ce{2 Na^+ + Sn(s) -> 2 Na(s) + Sn^2+}
+\begin{enumerate}[label=\Alph*.]
+    \item $-$550 kJ/mol
+    \hlitem +496 kJ/mol
+    \item +248 kJ/mol
+    \item +510 kJ/mol
+\end{enumerate}}
+
+$\Delta G^o$ can be found using the formula $\Delta G^o = -nFE^o_{cell}$. In order to use it, we need to find the $\ecell$ of the reaction. This is a simple matter of adding the $\eox{Sn}$ and the $\ered{Na^+}$, which are given as 0.14 V and $-$2.71 V, respectively. 
+\begin{align*}
+    \ecell = \eox{Sn} + \ered{Na^+} = 0.14\: V + -2.71\: V = &-2.57\: V \\
+    \Delta G^o = -nFE^o_{cell} = -2(96485\: C\: mol^{-1})(&-2.57\: V) = 496\: kJ/mol
+\end{align*}    
+
+\section{Question 6}
+\qs{}{
+In a Ag/Cu Galvanic cell, Ag(s) and Cu(s) electrodes were places in a solution with 0.50 M \ce{Ag^+} and 0.50 M \ce{Cu^2+}. What can be concluded $Q$ and $\ecell$ at the start of the reaction? 
+\begin{enumerate}[label=\Alph*.]
+    \item $Q > 1$ at the start of the reaction and $\ecell > E^o$
+    \item $Q > 1$ at the start of the reaction and $\ecell < E^o$
+    \item $Q < 1$ at the start of the reaction and $\ecell > E^o$
+    \item $Q < 1$ at the start of the reaction and $\ecell < E^o$
+\end{enumerate}}
+
+
+
+\section{Question 7}
+\qs{}{
+A solution of unknown pH is placed in the hydrogen compartment of a galvanic cell, with the \ce{H2} pressure maintained at 1 atm. The other half-cell compartment consists of a Cu/\ce{Cu^2+} electrode with \\ $[\ce{Cu^2+}] = 1.00 $ M. If the overall cell potential at 25 \degree C is +0.23 V, which describes the hydrogen compartment?
+\begin{enumerate}[label=\Alph*.]
+    \item Hydrogen is the anode with a $[\ce{H^+}] > 1.0$ M
+    \item Hydrogen is the cathode with a $[\ce{H^+}] > 1.0$ M
+    \item Hydrogen is the anode with a $[\ce{H^+}] < 1.0$ M
+    \item Hydrogen is the cathode with a $[\ce{H^+}] < 1.0$ M
+\end{enumerate}}
+
+\section{Question 8}
+\qs{}{
+You apply a steady current at 2.22 V into an electrolytic cell with a solution of 0.333 M \ce{AlCl3} and notice that bubbles form at the cathode. What is the identity of this gas? 
+\begin{enumerate}[label=\Alph*.]
+    \item \ce{Cl2(g)}
+    \hlitem \ce{H2(g)}
+    \item \ce{Al(g)}
+    \item \ce{O2(g)}
+\end{enumerate}}
+
+By the common sense test, we know that \ce{Al} is not a gas at room temperature. To remember what reaction occurs where, remember the mnemonic Red Cat and An Ox, which says that \textbf{Red}uction occurs at the \textbf{Cat}hode and \textbf{Ox}idation occurs at the \textbf{An}ode. Since the question is asking about the reaction at the cathode, we know that reduction is occurring. The only gas that is reduced in this reaction is \ce{H2(g)}.
+
+The rest of the info given in the question is irrelevant. But could conceivably be used to verify the answer.
+
+\section{Question 9}
+\qs{}{
+How long will it take to plate 0.0500 g Al from \ce{Al(NO3)2} solution is a current of 0.919 amp is used?
+\begin{enumerate}[label=\Alph*.]
+    \item 24.6 s
+    \item 194 s
+    \item 304 s
+    \item 583 s
+\end{enumerate}}
+
+The roadmap of this question is to find the number of moles of Al deposited, then find the number of electrons that were deposited, and finally find the time it took to deposit the Al.
+
+\begin{math}
+    (0.0500\: \ce{g Al})(\frac{1\: \ce{mol Al}}{26.98\: \ce{g Al}})(\frac{3\: \ce{mol}\: e^-}{1\:\ce{mol Al}})(\frac{96485\: C}{1\: \ce{mol}\: e^-})(\frac{1\: s}{0.919\: C}) = 583.7\: s
+\end{math}
+
+
+\section{Question 10}
+\qs{}{
+You are studying the oxidation states of Yttrium and are interested in the electron configuration of this element after it is oxidized. You apply a current of 10.0 amps to a solution of Yttrium chloride for 3972 seconds. 12.2 g solid Yttrium is deposited. Which of the following is the most likely electron configuration of Yttrium in Yttrium chloride?
+\begin{enumerate}[label=\Alph*.]
+    \item \ce{[Kr] 5s^2 4d^1}
+    \item \ce{[Kr] 5s^2}
+    \item \ce{[Kr] 5s^1}
+    \hlitem \ce{[Kr]}
+\end{enumerate}}
+
+The roadmap of this question is to find the number of moles of Yttrium deposited, then find the number of electrons that were deposited, and finally find the electron configuration of Yttrium. 
+\begin{align*}
+    \text{Moles of Yttrium} &= \left(12.2\: g\right)\left(\frac{1\: mol}{88.91\: g}\right) = 0.137\: mol \\
+    \text{Electrons deposited} &= \text{Amps} \times \text{Seconds} = 10.0\: A \times 3972\: s = 39720\: C \\
+    \text{Electron per Yttrium atom} &= \left(39720\: C\right)\left(\frac{1\: mol\: e^-}{96485\: C}\right)\left(\frac{1}{0.137\: mol\: \ce{Y}}\right) = 3.00 \: e^-\: per\: \ce{Y} \\ 
+\end{align*}
+
+The rest configuration of Yttrium is \ce{[Kr] 5s^2 4d^1}. Since 3 electrons were deposited, the electron configuration of Yttrium must be \ce{[Kr]}. 
+
+\chapter{Unit 8: Entropy and Gibbs Free Energy}
+\section{Question 11}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 12}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 13}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 14}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 15}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 16}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 17}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 18}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 19}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 20}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+
+\chapter{Unit 8: Entropy and Gibbs Free Energy}
+\section{Question 21}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 22}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 23}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 24}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 25}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 26}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 27}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 28}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 29}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+\section{Question 30}
+\qs{}{
+
+\begin{enumerate}[label=\Alph*.]
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}}
+
+
+\end{document}

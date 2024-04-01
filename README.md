@@ -1,2 +1,2 @@
 # AP-Chem
- Some disorganized LaTeX notes
+ Some pseudo-organized LaTeX notes
